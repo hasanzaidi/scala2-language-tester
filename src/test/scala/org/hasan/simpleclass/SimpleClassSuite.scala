@@ -44,15 +44,4 @@ class SimpleClassSuite extends AnyFunSuite with Matchers {
     result.numer should equal(5)
     result.denom should equal(12)
   }
-
-  test("assigning values to val/def") {
-    val sc = new SimpleClass(1, 2)
-    // myPrint2 not executed when defined but when called
-    sc.myPrint2
-    sc.myPrint2
-
-    // myPrint only executed above and repeated references will just use the cached value
-    sc.myPrint
-    sc.myPrint
-  }
 }

@@ -16,7 +16,7 @@ class HighOrderFunctionSuite extends AnyFunSuite with Matchers {
 
   test("Applying function to String, treating as list of chars") {
     val s = "Hello World"
-    s filter (c => c.isUpper) should equal("HELLO WORLD")
+    s filter (c => c.isUpper) should equal("HW")
   }
 
   test("Subtracting a list of numbers using reduce") {

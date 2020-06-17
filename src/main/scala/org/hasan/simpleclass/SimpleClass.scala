@@ -36,16 +36,6 @@ class SimpleClass(x: Int, y: Int, val z: Int = 10000) {
   }
 
   override def toString = this.numer + ", " + this.denom
-
-  def myPrint2: Int = {
-    println("Executed myPrint2")
-    2
-  }
-
-  val myPrint = {
-    println("Executed myPrint")
-    2
-  }
 }
 
 // Can simulate static fields in Scala by using Companion objects

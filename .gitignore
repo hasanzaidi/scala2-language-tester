@@ -20,3 +20,6 @@ project/plugins/project/
 
 # OS specific
 .DS_Store
+
+# jEnv
+.java-version

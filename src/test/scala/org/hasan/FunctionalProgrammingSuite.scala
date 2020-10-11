@@ -42,16 +42,18 @@ class FunctionalProgrammingSuite extends AnyFunSuite with Matchers {
     add3(1) should equal(4)
   }
 
-  test("Building functions using functions") {
+  test("Building functions using functions using andThen or compose") {
     // Given:
     val add1 = (i: Int) => i + 1
     val double = (i: Int) => i * 2
 
     // When:
     val addThenDouble = add1 andThen double
+    val addThenDoubleWithCompose = double compose add1
 
     // Then:
     Seq(1, 2, 3).map(addThenDouble) should equal(Seq(4, 6, 8))
+    Seq(1, 2, 3).map(addThenDoubleWithCompose) should equal(Seq(4, 6, 8))
   }
 
   test("Flatten function on Option") {

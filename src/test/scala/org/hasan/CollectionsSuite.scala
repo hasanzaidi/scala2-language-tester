@@ -13,14 +13,14 @@ class CollectionsSuite extends AnyFunSpec with Matchers {
       // val scores = Map[String, Integer].apply("Apple" -> 100, "Mango" -> 87, "Banana" -> 42)
       val scores =
         Map[String, Integer]("Apple" -> 100, "Mango" -> 87, "Banana" -> 42)
-      val appleVal = scores("Apple")
+      val appleVal: Integer = scores("Apple")
       appleVal should equal(100)
 
       // Get returns an optional so can use to check if something exists
-      val appleExists = scores.get("Apple")
+      val appleExists: Option[Integer] = scores.get("Apple")
       appleExists.isDefined shouldBe true
 
-      val orangeExists = scores.get("Orange")
+      val orangeExists: Option[Integer] = scores.get("Orange")
       orangeExists.isDefined shouldBe false
     }
 

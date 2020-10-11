@@ -53,6 +53,7 @@ class CollectionsSuite extends AnyFunSpec with Matchers {
     it("Can append to a list using ::, instead of += because List is immutable") {
       val newFruits = "Strawberry" :: fruits
       newFruits should equal(Seq("Strawberry", "Apple", "Mango", "Banana"))
+      newFruits.length should equal(4)
     }
   }
 

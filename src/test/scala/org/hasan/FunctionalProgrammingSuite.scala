@@ -30,9 +30,10 @@ class FunctionalProgrammingSuite extends AnyFunSuite with Matchers {
   }
 
   test("Curried function") {
-    def curriedAdd(a: Int) = (b: Int) => {
-      a + b
-    }
+    def curriedAdd(a: Int) =
+      (b: Int) => {
+        a + b
+      }
 
     // Can call using multiple function calls
     curriedAdd(3)(1) should equal(4)

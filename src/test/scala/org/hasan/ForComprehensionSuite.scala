@@ -26,6 +26,16 @@ class ForComprehensionSuite extends AnyFunSuite with Matchers {
     sum should equal(6)
   }
 
+  test("A for loop which uses until instead of to") {
+    // Given/When:
+    // until is exclusive instead of inclusive
+    var sum = 0
+    for (i <- 1 until 4) sum = sum + i
+
+    // Then:
+    sum should equal(6)
+  }
+
   test("yield returns an Option") {
     // Given/When:
     val product: Option[Int] = for {

@@ -121,4 +121,13 @@ class PatternMatchingSuite extends AnyFunSuite with Matchers {
     multipleMatch(1) should equal("odd")
     multipleMatch(2) should equal("even")
   }
+
+  test("Pattern matching multiple matches with expression") {
+    val i = 2
+    val oddOrEven = i match {
+      case 1 | 3 | 5 => "odd"
+      case 2 | 4 | 6 => "even"
+    }
+    oddOrEven should equal("even")
+  }
 }

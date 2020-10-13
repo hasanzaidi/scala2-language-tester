@@ -74,4 +74,17 @@ class BasicLanguageSuite extends AnyFunSuite with Matchers {
     val newString = s"$myString"
     newString should equal("\"abc\"")
   }
+
+  test(
+    "Creating Option"
+  ) {
+    val some: Option[Int] = Some(5)
+    val none: Option[Int] = None
+
+    val x = some.getOrElse(100)
+    val y = none.getOrElse(100)
+
+    x should equal(5)
+    y should equal(100)
+  }
 }

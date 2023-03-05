@@ -1,5 +1,5 @@
-# scala-language-tester
-Repo for testing features of the Scala language.
+# scala2-language-tester
+Repo for testing features of the Scala 2 language.
 
 ## Set Up
 Make sure you are using JDK 8.
